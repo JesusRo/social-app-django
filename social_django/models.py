@@ -133,6 +133,7 @@ class Partial(models.Model, DjangoPartialMixin):
 
     class Meta:
         app_label = "social_django"
+        unique_together = ("provider", "uid")
         db_table = "social_auth_partial"
 
 
